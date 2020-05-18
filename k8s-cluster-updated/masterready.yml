@@ -1,8 +1,8 @@
-hosts: master
+- hosts: master
   become: yes
   tasks:
-    - name: get nodes status
-      shell: kubectl get nodes >>nodestatus.txt
+    - name: initialize the cluster
+      shell: kubectl get nodes >> nodestatus.txt
       args:
         chdir: $HOME
         creates: nodestatus.txt
