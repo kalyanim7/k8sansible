@@ -1,7 +1,7 @@
 #! /usr/bin/python
 
-f1 = open('hosts1', "r")
-f2 = open('/home/ubuntu/k8s/k8s-cluster-updated/hosts', "w")
+f1 = open('/tmp/ansibleinput/hosts1', "r")
+f2 = open('/tmp/ansibleoutput/hosts', "w")
 masters_count = 0
 workers_count = 0
 for line in f1:
