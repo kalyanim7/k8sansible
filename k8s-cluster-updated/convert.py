@@ -1,7 +1,7 @@
 #! /usr/bin/python
 
-f1 = open('/usr/ansibleinput/hosts1', "r")
-f2 = open('/usr/ansibleinput/hosts', "w")
+f1 = open('/opt/ansibleinput/hosts1', "r")
+f2 = open('/opt/ansibleinput/hosts', "w")
 masters_count = 0
 workers_count = 0
 for line in f1:
