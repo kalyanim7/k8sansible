@@ -3,8 +3,10 @@
   become_user: ubuntu
   tasks:
     - name: Get Master Node status
+      shell: while kubectl get nodes | grep -i " in progress "; do sleep 5; done
       shell: kubectl get nodes >> nodestatus.txt
       args:
         chdir: $HOME
         creates: nodestatus.txt
+        
       
